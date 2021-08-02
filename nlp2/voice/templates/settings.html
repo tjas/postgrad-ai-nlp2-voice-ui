@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% comment %} {% block page_title %}Settings{% endblock %} {% endcomment %}
+{% block page_title %}Configurações{% endblock %}
+{% comment %} {% block description %}Enter your access credentials (kept only for this session). Access keys temporary available.{% endblock %} {% endcomment %}
+{% block description %}Informe suas credenciais de acesso (mantidas apenas para esta sessão). Chaves de acesso liberada temporariamente.{% endblock %}
+
+{% block content %}
+
+    <form class="row g-3 needs-validation">
+
+        <div class="row-md-3">
+            <label for="exampleFormControlInput1" class="form-label">API</label>
+            <select class="form-select" disabled>
+                <option value="1" selected>IBM Cloud</option>
+            </select>
+        </div>
+
+        <div class="row-md-3">
+            {% comment %} <label for="sttKey" class="form-label">Speech to Text</label> {% endcomment %}
+            <label for="sttKey" class="form-label">Voz Para Texto</label>
+            {% if sttKey %}
+            <input type="password" class="form-control" id="sttKey" name="sttKey" value="{{sttKey}}" required disabled>
+            {% else %}
+            <input type="password" class="form-control" id="sttKey" name="sttKey" placeholder="API key" required disabled>
+            {% endif %}
+        </div>
+
+        <div class="row-md-3">
+            {% comment %} <label for="ttsKey" class="form-label">Text to Speech</label> {% endcomment %}
+            <label for="ttsKey" class="form-label">Texto Para Voz</label>
+            {% if ttsKey %}
+            <input type="password" class="form-control" id="ttsKey" name="ttsKey" value="{{ttsKey}}" required disabled>
+            {% else %}
+            <input type="password" class="form-control" id="ttsKey" name="ttsKey" placeholder="API key" required disabled>
+            {% endif %}
+        </div>
+
+        <div class="col-auto">
+            {% comment %} <button type="submit" id="settingsSubmitBtn" class="btn btn-outline-success btn-lg" disabled>Submit</button> {% endcomment %}
+            <button type="submit" id="settingsSubmitBtn" class="btn btn-outline-success btn-lg" disabled>Enviar</button>
+            {% comment %} <button type="submit" id="settingsClearBtn" class="btn btn-outline-secondary btn-lg" disabled>Clear</button> {% endcomment %}
+            <button type="submit" id="settingsClearBtn" class="btn btn-outline-secondary btn-lg" disabled>Limpar</button>
+        </div>
+
+    </form>
+
+{% endblock %}
