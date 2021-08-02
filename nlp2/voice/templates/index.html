@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% comment %} {% block page_title %}Voice User Interface{% endblock %} {% endcomment %}
+{% block page_title %}Interface do Usuário Baseada em Voz{% endblock %}
+{% comment %} {% block description %}Configure your credentials in <a href="{% url 'voice:settings' %}">Settings</a>, then select one voice interface to obtain more interactions{% endblock %} {% endcomment %}
+{% block description %}Configure suas credenciais nas <a href="{% url 'voice:settings' %}">Configurações</a> e então selecione uma interface de voz para obter mais interações{% endblock %}
+
+{% block content %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="row g-0">
+                <a class="card-block stretched-link text-decoration-none" href="{% url 'voice:tts' %}">
+                    <div class="col">
+                        <img src="{% static 'img/credentials.png' %}" class="img-fluid rounded-start align-self-center"  alt="">
+                    </div>
+                    <div class="col">
+                        <div class="card-body ">
+                            {% comment %} <h5 class="card-title">Text to Speech</h5> {% endcomment %}
+                            <h5 class="card-title">Texto Para Voz</h5>
+                            {% comment %} <p class="card-text">Enter text and get audio with artificially synthesized voice.</p> {% endcomment %}
+                            <p class="card-text">Entre com uma mensagem de texto e obtenha o áudio, com voz sintetizada artificialmente.</p>
+                            {% comment %} <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> {% endcomment %}
+                            <p class="card-text"><small class="text-muted">Acesso liberado</small></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="row g-0">
+                <a class="card-block stretched-link text-decoration-none" href="{% url 'voice:stt' %}">
+                    <div class="col">
+                        <img src="{% static 'img/credentials.png' %}" class="img-fluid rounded-start align-self-center" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            {% comment %} <h5 class="card-title">Speech to Text</h5> {% endcomment %}
+                            <h5 class="card-title">Voz Para Texto</h5>
+                            {% comment %} <p class="card-text">Record a voice message with our online recorder and get the message transcript.</p> {% endcomment %}
+                            <p class="card-text">Grave uma mensagem de áudio com o nosso gravador online e obtenha a mensagem transcrita.</p>
+                            {% comment %} <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> {% endcomment %}
+                            <p class="card-text"><small class="text-muted">Acesso liberado</small></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="row g-0">
+                <a class="card-block stretched-link text-decoration-none" href="{% url 'voice:settings' %}">
+                    <div class="col">
+                        <img src="{% static 'img/credentials.png' %}" class="img-fluid rounded-start align-self-center" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            {% comment %} <h5 class="card-title">Settings</h5> {% endcomment %}
+                            <h5 class="card-title">Configurações</h5>
+                            {% comment %} <p class="card-text">Configure your credentials to access the service. Currently only available on the IBM Cloud.</p> {% endcomment %}
+                            <p class="card-text">Configure suas credenciais para acessar o serviço. Disponível, atualmente, apenas na plataforma IBM Cloud.</p>
+                            {% comment %} <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> {% endcomment %}
+                            <p class="card-text"><small class="text-muted">Acesso liberado</small></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Bootstrap required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        {% comment %} <title>{% block title %}NLP | Voice User Interface{% endblock %}</title> {% endcomment %}
+        <title>{% block title %}NLP | Interface do Usuário Baseada em Voz{% endblock %}</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+        <!-- Font Awesome CSS (https://fontawesome.com/): -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/bf46ad85a1.js"></script>
+
+        <!-- Personilized CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+        <!-- Audio recorder -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/recorder.css' %}">
+
+        <!-- Audio player -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/player.css' %}">
+
+        <!-- Runtime CSS aditions -->
+        {% comment %} {% block morestyles %}{% endblock %} {% endcomment %}
+
+    </head>
+
+    <body>
+
+        <div id="main" class="container">
+
+            <div class="header">
+                {% comment %} <h1>Natural Language Processing</h1> {% endcomment %}
+                <h1>Processamento de Linguagem Natural</h1>
+                <div class="col-md-auto">
+                    <div class="row" id="menu-list">
+                        <div class="col-md-auto menu-option selected-menu" id="menu-home">
+                            {% comment %} <a href="{% url 'voice:index' %}" class="">Home</a> {% endcomment %}
+                            <a href="{% url 'voice:index' %}" class="">Início</a>
+                        </div>
+                        <div class="col-md-auto menu-option" id="menu-tts"> 
+                            {% comment %} <a href="{% url 'voice:tts' %}" class="">Text to Speech</a> {% endcomment %}
+                            <a href="{% url 'voice:tts' %}" class="">Texto Para Voz</a>
+                        </div>
+                        <div class="col-md-auto menu-option" id="menu-stt">
+                            {% comment %} <a href="{% url 'voice:stt' %}" class="">Speech to Text</a> {% endcomment %}
+                            <a href="{% url 'voice:stt' %}" class="">Voz Para Texto </a>
+                        </div>
+                        <div class="col-md-auto menu-option" id="menu-settings">
+                            {% comment %} <a href="{% url 'voice:settings' %}" class="">Settings</a> {% endcomment %}
+                            <a href="{% url 'voice:settings' %}" class="">Configurações</a>
+                        </div>
+                    </div>
+                </div>
+                <h3>{% block page_title %}{% endblock %}</h3>
+                <div class="">
+                    <p class="description">
+                        {% block description %}{% endblock %}
+                    </p>
+                </div>
+            </div>
+
+            {% comment %} <div id="content" class="d-flex align-content-center flex-wrap"> {% endcomment %}
+            <div id="content" class="">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div id="footbar" class="row">
+                <div class="col">
+                    {% comment %} <p>© 2021 This project is distributed under <a href="https://github.com/tjas/postgrad-ai-nlp2-voice-ui/blob/master/LICENSE">MIT Licence</a> for free sharing and educational purposes. Access the project <a href="https://github.com/tjas/postgrad-ai-nlp2-voice-ui/blob/master/LICENSE">GitHub</a> for more details .</p> {% endcomment %}
+                    <p>© 2021 Este projeto é distribuído sob a <a href="https://github.com/tjas/postgrad-ai-nlp2-voice-ui/blob/master/LICENSE">Licença MIT</a> para livre compartilhamento e propósitos educacionais. Acesse o <a href="https://github.com/tjas/postgrad-ai-nlp2-voice-ui/blob/master/LICENSE">GitHub</a> do projeto para mais detalhes.</p>
+                </div>
+                {% comment %} <div class="col-md-auto">
+                    .
+                </div> {% endcomment %}
+                <div class="col-md-auto">
+                    <div class="row">
+                        <div class="footbar-menu-option col-md-auto">
+                            {% comment %} <a href="{% url 'voice:index' %}">Home</a> {% endcomment %}
+                            <a href="{% url 'voice:index' %}">Início</a>
+                        </div>
+                        <div class="footbar-menu-option col-md-auto"> 
+                            {% comment %} <a href="{% url 'voice:tts' %}">Text to Speech</a> {% endcomment %}
+                            <a href="{% url 'voice:tts' %}">Texto Para Voz</a>
+                        </div>
+                        <div class="footbar-menu-option col-md-auto">
+                            {% comment %} <a href="{% url 'voice:stt' %}">Speech to Text</a> {% endcomment %}
+                            <a href="{% url 'voice:stt' %}">Voz Para Texto </a>
+                        </div>
+                        <div class="footbar-menu-option col-md-auto">
+                            {% comment %} <a href="{% url 'voice:settings' %}">Settings</a> {% endcomment %}
+                            <a href="{% url 'voice:settings' %}">Configurações</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bootstrap JavaScript bundle, including Popper for tooltips and popovers-->
+        <script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+        <!-- JQuery -->
+        <script src="{% static 'js/jquery.js' %}"></script>
+
+        <!-- Main script -->
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+        <!-- Audio recorder -->
+        <script type="text/javascript" src="{% static 'js/recorder.js' %}"></script>
+
+        <!-- Audio player -->
+        <script type="text/javascript" src="{% static 'js/player.js' %}"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new GreenAudioPlayer('.audio-player', { showTooltips: true, showDownloadButton: false, enableKeystrokes: true });
+            });
+        </script>
+
+
+        <!-- Tooltips -->
+        <script type="text/javascript" src="{% static 'js/tooltips.js' %}"></script>
+
+    </body>
+
+</html>
