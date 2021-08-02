@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% comment %} {% block page_title %}Text to Speech{% endblock %} {% endcomment %}
+{% block page_title %}Texto Para Voz{% endblock %}
+{% comment %} {% block description %}Type text to obtain speech{% endblock %} {% endcomment %}
+{% block description %}Digite um texto e obtenha o áudio{% endblock %}
+
+{% block content %}
+
+
+    <form class="row g-3 needs-validation" method="POST">
+        
+        {% csrf_token %}
+
+        <div class="mb-3">
+        {% if ttsText %}
+            {% comment %} <textarea class="form-control" id="ttsText" name="ttsText" placeholder="Type your text here..." required>{{ ttsText }}</textarea> {% endcomment %}
+            <textarea class="form-control" id="ttsText" name="ttsText" placeholder="Digite o texto aqui..." required>{{ ttsText }}</textarea>
+        {% else %}
+            {% comment %} <textarea class="form-control" id="ttsText" name="ttsText" placeholder="Type your text here..." required></textarea> {% endcomment %}
+            <textarea class="form-control" id="ttsText" name="ttsText" placeholder="Digite o texto aqui..." required></textarea>
+        {% endif %}
+        </div>
+
+        {% if audio %}
+        <div class="mb-3">
+            {% comment %} <label for="ttsSpeech" class="form-label">Speech output</label> {% endcomment %}
+            {% comment %} <textarea class="form-control" id="ttsSpeech" placeholder="Type text here" required></textarea> {% endcomment %}
+            {% comment %} <div class="invalid-feedback">Please enter a message in the textarea.</div> {% endcomment %}
+            <div class="" id="ttsSpeech" name="ttsSpeech">
+                {% include 'player.html' with audio_path=audio %}
+            </div>
+        </div>
+        {% else %}
+        {% comment %} <div class="" id="" name="">Submit your text to get audio output.</div> {% endcomment %}
+        {% endif %}
+        
+        <div class="col-auto">
+            {% comment %} <button type="submit" id="ttsSubmitBtn" class="btn btn-outline-success btn-lg" disabled>Submit</button> {% endcomment %}
+            <button type="submit" id="ttsSubmitBtn" class="btn btn-outline-success btn-lg" disabled>Enviar</button>
+            {% comment %} <button type="submit" id="ttsClearBtn" class="btn btn-outline-secondary btn-lg" disabled>Clear</button> {% endcomment %}
+            <button type="submit" id="ttsClearBtn" class="btn btn-outline-secondary btn-lg" disabled>Limpar</button>
+        </div>
+
+
+    </form>
+
+{% endblock %}

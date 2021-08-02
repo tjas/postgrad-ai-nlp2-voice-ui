@@ -1,0 +1,13 @@
+{% load static %}
+{% if audio_path %}
+    <div class="audio audio-player">
+        <audio crossorigin preload="none">
+            {% comment %} <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/Swing_Jazz_Drum.mp3" type="audio/mpeg"> {% endcomment %}
+            <source src="{% static 'audio/audio-sintetizado.wav' %}" type="audio/wav">
+        </audio>
+    </div>
+{% else %}
+    {% comment %} <div class="" id="" name="">No valid audio format.</div> {% endcomment %}
+    <div class="" id="" name="">Formato de áudio inválido.</div>
+{% endif %}
+

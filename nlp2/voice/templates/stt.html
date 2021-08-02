@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% comment %} {% block page_title %}Speech to Text{% endblock %} {% endcomment %}
+{% block page_title %}Voz Para Texto{% endblock %}
+{% comment %} {% block description %}Record audio to obtain transcription{% endblock %} {% endcomment %}
+{% block description %}Grave um áudio e obtenha a transcrição{% endblock %}
+
+{% block content %}
+
+    <form class="col g-3 needs-validation">
+
+        {% csrf_token %}
+
+        <div class="row mb-3">
+            {% comment %} <label for="sttValidationSpeech" class="form-label">Speech input</label> {% endcomment %}
+            {% comment %} <textarea class="form-control" id="sttValidationSpeech" placeholder="Type text here" required></textarea> {% endcomment %}
+            {% comment %} <div class="invalid-feedback">Please enter a message in the textarea.</div> {% endcomment %}
+        </div>
+
+        <div class="mb-3">
+        {% if result %}
+            <textarea class="form-control" id="sttGeneratedText" name="sttGeneratedText" placeholder="" readonly>{{result}}</textarea>
+        {% else %}
+            <textarea class="form-control" id="sttGeneratedText" name="sttGeneratedText" placeholder="" readonly></textarea>
+        {% endif %}
+        </div>
+
+        <div class="row" id="sttValidationSpeech" disabled>
+            {% include 'recorder.html' %}
+        </div>
+
+        {% comment %} <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        </div> {% endcomment %}
+
+    </form>
+
+{% endblock %}

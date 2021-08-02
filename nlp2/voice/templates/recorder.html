@@ -1,0 +1,22 @@
+{% comment %} <div class="app-container">
+    <div class="timer" id="timer">00:00:00</div>
+    <div class="btn-wrapper">
+        <button class="btn-floating btn-large waves-effect waves-light red" id="start"><i class="material-icons">mic</i></button>
+        <button class="hide btn-floating btn-large waves-effect waves-light red" id="stop"><i class="material-icons">stop</i></button>
+    </div>
+</div> {% endcomment %}
+
+<div class="audio-recorder row">
+
+    <div class="col-auto">
+        {% comment %} <button class="btn btn-danger btn-lg" id="start" name="start" title="Start Record" type="button"><i class="fas fa-microphone" alt="rec"></i> Rec</button> {% endcomment %}
+        <button class="btn btn-danger btn-lg" id="start" name="start" title="Start Record" type="button"><i class="fas fa-microphone" alt="rec"></i> Gravar</button>
+        {% comment %} <button class="btn btn-outline-secondary btn-lg" id="stop" name="stop" title="Stop Record" type="button" disabled><i class="fas fa-stop"></i> Stop</button> {% endcomment %}
+        <button class="btn btn-outline-secondary btn-lg" id="stop" name="stop" title="Stop Record" type="button" disabled><i class="fas fa-stop"></i> Parar</button>
+    </div>
+
+    <div class="col-auto">
+        <div class="timer" id="timer">00:00</div>
+    </div>
+
+</div>
