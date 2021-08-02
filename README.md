@@ -57,6 +57,27 @@ This is an example of how you may set up your project locally. To get a local co
 
 * Distributed under the `MIT License`.
 
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* Related work of 
+    * [sergiosdlima](https://github.com/sergiosdlima/ibm-watson-tts-stt)
+    * [luciano-f](https://github.com/luciano-f/iesb-nlp2)
+* Official documentation of
+    * [Django](https://docs.djangoproject.com/en/3.2/)
+    * [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    * [jQuery](https://api.jquery.com/)
+* Graphycal components obtained from the web and adapted
+    * Vectorial icons from [Font Awesome](https://fontawesome.com/)
+    * Illustrations from [unDraw](https://undraw.co/illustrations)
+    * Audio player: [green-audio-player](https://github.com/greghub/green-audio-player)
+    * Audio recorder: [work of Well Wisher at CodePen](https://codepen.io/jayantnirmalkar/pen/YzXzpLB)
+* Tutorials for Django deployment at Heroku
+    * [Deploying Python and Django Apps on Heroku](https://devcenter.heroku.com/articles/deploying-python)
+    * [Deploy de uma aplicação Django no Heroku](https://www.treinaweb.com.br/blog/deploy-de-uma-aplicacao-django-no-heroku)
+    * [Tutorial Django Parte 11: Hospedando Django para produção](https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Deployment)
+    * [Tutorial como fazer deploy de um projeto Django usando Heroku [Python + Django + Heroku]](https://www.youtube.com/watch?v=f6PVDxCB08A)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
