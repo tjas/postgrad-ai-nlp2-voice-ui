@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Temporary audio files
+nlp2/voice/static/audio/audio-gravado.webm
+nlp2/voice/static/audio/audio-sintetizado.wav
