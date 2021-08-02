@@ -1,7 +1,12 @@
 # postgrad-ia-nlp2-voice-ui
-This project aims to solve the proposed exercise in "Cognitive Computing 2: Voice User Interface" (Prof. Rafael Brasileiro) discipline, taken place in later 2021 in the context of postgraduate in artificial intelligence, at [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/). We plan to evolve the app in the future and refactor the code.
+This project aims to solve the proposed exercise in "Cognitive Computing 2: Voice User Interface" (Prof. Rafael Brasileiro) discipline, taken place in later 2021 in the context of postgraduate in artificial intelligence, at [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/). We plan to evolve the app in the future, refactor the code and resolve some known issues.
 
 A preview is available online at: https://postgrad-ia-nlp2-voice-ui.herokuapp.com/
+
+[![Início][screenshot-home]]()
+[![Texto Para Voz][screenshot-tts]]()
+[![Voz Para Texto][screenshot-stt]]()
+[![Configurações][screenshot-config]]()
 
 ## Build With
 
@@ -9,6 +14,37 @@ A preview is available online at: https://postgrad-ia-nlp2-voice-ui.herokuapp.co
 * Django 3.2.5
 * Bootstrap 5.0.2
 * jQuery 3.6.0
+
+## Getting Started
+
+This is an example of how you may set up your project locally. To get a local copy up and running follow these steps. We strongly recommended that you use virtual environments to run the application, we recommend [Virtualenv](https://virtualenv.pypa.io/en/latest/), read it, create and activate the virtual environment inside project folder and before steps 5.
+
+### Installation
+
+1. Make sure you have Python 3.6.9+ installed or do it from [Python.org](https://www.python.org/) or from [Anaconda](https://www.anaconda.com/);
+2. Make sure you have Git installed or do it from [Git-scm.com](https://git-scm.com/);
+3. Access the folder you want to save the project, then clone the repo there
+   ```sh
+   git clone https://github.com/tjas/postgrad-ai-nlp2-voice-ui
+   ```
+4. Access the project folder
+   ```sh
+   cd nlp2
+   ```
+5. Resolve dependencies
+   ```py
+   pip install -r requirements.txt
+   ```
+6. Make migrations
+    ```py
+    python manage.py migrate
+    ```
+7. Run Django project
+    ```py
+    python manage.py runserver
+    ```
+8. Then access aplication at http://127.0.0.1:8000/
+
 
 <!-- CONTACT -->
 ## Contact
@@ -19,4 +55,12 @@ A preview is available online at: https://postgrad-ia-nlp2-voice-ui.herokuapp.co
 <!-- LICENSE -->
 ## License
 
-Distributed under the `MIT License`.
+* Distributed under the `MIT License`.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[screenshot-home]: screenshots/nlp2_voice_ui_01_home_01.png
+[screenshot-tts]: screenshots/nlp2_voice_ui_02_tts_02.png
+[screenshot-stt]: screenshots/nlp2_voice_ui_03_stt_02.png
+[screenshot-config]: screenshots/nlp2_voice_ui_04_config_01.png
