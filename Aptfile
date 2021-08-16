@@ -1,3 +1,4 @@
 # PyAudio dependencies
 portaudio19-dev
 python-all-dev
+libasound-dev
