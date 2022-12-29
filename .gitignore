@@ -129,8 +129,9 @@ dmypy.json
 .pyre/
 
 # Temporary audio files
-nlp2/voice/static/audio/audio-gravado.webm
-nlp2/voice/static/audio/audio-sintetizado.wav
+nlp2/voice/static/audio/
+*.webm
+*.wav
 
 # JetBrains
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
