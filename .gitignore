@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # Temporary audio files
-nlp2/voice/static/audio/
+nlp2/voice/static/audio/*
 *.webm
 *.wav
 
