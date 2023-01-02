@@ -1,4 +1,5 @@
 # PyAudio dependencies
+libportaudio2
 libasound2-dev
 libasound2 
 libasound2-data 
