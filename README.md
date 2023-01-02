@@ -1,12 +1,21 @@
 # postgrad-ia-nlp2-voice-ui
+
+[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](./README.md)
+[![Licence](https://img.shields.io/github/license/tjas/postgrad-ia-nlp2-voice-ui?color=blue)](./LICENSE.md)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftjas%2Fpostgrad-ia-nlp2-voice-ui&count_bg=%2379C83D&title_bg=%23555555&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Stars](https://img.shields.io/github/stars/tjas/postgrad-ia-nlp2-voice-ui?color=yellow)](https://github.com/tjas/postgrad-ai-nlp2-voice-ui)
+[![Python](https://img.shields.io/badge/python-v3.6.9-darkgreen)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/django-v3.2.5-green)](https://www.djangoproject.com/)
+[![Bootstrap](https://img.shields.io/badge/bootstrap-v5.0.2-purple)](https://www.djangoproject.com/)
+
 This project aims to solve the proposed exercise in "Cognitive Computing 2: Voice User Interface" (Prof. Rafael Brasileiro) discipline, taken place in later 2021 in the context of postgraduate in artificial intelligence, at [Centro de Educação Superior de Brasília (IESB)](https://www.iesb.br/). We plan to evolve the app in the future, refactor the code and resolve some known issues.
 
 A preview is available online at: https://postgrad-ia-nlp2-voice-ui.herokuapp.com/
 
-[![Início][screenshot-home]]()
-[![Texto Para Voz][screenshot-tts]]()
-[![Voz Para Texto][screenshot-stt]]()
-[![Configurações][screenshot-config]]()
+![Início][screenshot-home]
+![Texto Para Voz][screenshot-tts]
+![Voz Para Texto][screenshot-stt]
+![Configurações][screenshot-config]
 
 ## Build With
 
@@ -55,7 +64,7 @@ This is an example of how you may set up your project locally. To get a local co
 <!-- LICENSE -->
 ## License
 
-* Distributed under the `MIT License`.
+* Distributed under [MIT License](./LICENSE.md).
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
