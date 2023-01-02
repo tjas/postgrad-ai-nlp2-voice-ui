@@ -175,6 +175,10 @@ def sintetizar(texto: str):
         except PermissionError:
             print('Sem permissão de escrita')
             return False
+        except Exception as exc:
+            print('Erro ao ler o arquivo de áudio em \'nlp2/voice/static/audio/\'')
+            return False
+            
 
     return True
 
