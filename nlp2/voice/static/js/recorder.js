@@ -21,10 +21,16 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     const options = {mimeType: 'audio/webm'};
 
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+        window.localStream = stream;
+        window.localAudio.srcObject = stream;
+        window.localAudio.autoplay = true;
+
         //global
         window.stream = stream;
+        
         //media recorder
         window.recorder = new MediaRecorder(stream, options);
+        
 
     }).catch(function(err) {
         console.log('The following error occurred: ' + err);
