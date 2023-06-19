@@ -1,7 +1,7 @@
 # postgrad-ia-nlp2-voice-ui
 
 <!-- [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=http%3A%2F%2Fthiago-tjas.com%3A3000%2F&label=Website)](http://thiago-tjas.com:3000/) -->
-[![Status](https://img.shields.io/badge/status-active-brightgreen.svg?label=Status)](./README.md)
+[![Status](https://img.shields.io/badge/status-archived-brightgreen.svg?label=Status)](./README.md)
 [![Website](https://img.shields.io/badge/website-online-brightgreen.svg?label=Website)](http://thiago-tjas.com:3000/)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftjas%2Fpostgrad-ia-nlp2-voice-ui&count_bg=%2379C83D&title_bg=%23555555&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Licence](https://img.shields.io/github/license/tjas/postgrad-ia-nlp2-voice-ui?color=orange&label=Licence)](https://github.com/tjas/postgrad-ia-nlp2-voice-ui/blob/master/LICENCE)
